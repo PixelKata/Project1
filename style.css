@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+header {
+    width: 100%;
+    background: url('chat sushi.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Par défaut, prend toute la hauteur de la fenêtre */
+}
+
+header>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.61);
+    /* Ajoute un fond opaque pour rendre le texte lisible */
+    border-radius: 10px;
+    /* Ajoute des coins arrondis */
+}
+
+header>p {
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* mediaQueries pour les téléphones */
+@media (max-width: 767px) {
+    header {
+        height: 40vh;
+        /* Réduit à 50% la hauteur de la fenêtre sur les téléphones */
+    }
+
+    header .container {
+        margin: 30px;
+        /* Ajoute une marge pour éviter que le fond opaque touche les bords de la fenêtre */
+    }
+}
+
+/* mediaQueries écrans plus grands */
+@media (min-width: 768px) {
+    header {
+        height: 400px;
+        /* Ajuste la hauteur pour les écrans plus grands */
+    }
+
+    header .container {
+        margin: 30px;
+        padding: 100px;
+        /* Ajoute une marge pour éviter que le fond opaque touche les bords de la fenêtre */
+    }
+
+    header>p {
+        font-size: 1.5em;
+        padding: 50px;
+    }
+}
