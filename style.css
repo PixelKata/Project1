@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+div.container {
+
+    display: flex;
+    justify-content: center;
+    background-color: #D3BDB0;
+
+
+}
+
+div.img-container {
+    display: flex;
+    margin: 1rem;
+    padding: 0.5rem;
+    max-width: 50%;
+    width: 160px;
+    height: 130px;
+}
+
+div.text-container {
+    display: flex;
+    text-align: justify-all;
+    margin: 1rem;
+    padding: 0.5rem;
+    max-width: 50%;
+    font-size: 8.7px;
+    width: 160px;
+    height: 130px;
+
+
+
+}
