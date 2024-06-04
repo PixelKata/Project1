@@ -38,7 +38,7 @@ body {
     padding: 0;
     z-index: 10;
     position: relative;
-    /* Ensure the burger button is positioned correctly */
+
 }
 
 .burger_button:focus {
@@ -56,9 +56,8 @@ body {
 
 .navbar_menu {
     display: flex;
-    list-style: none;
     flex-direction: row;
-    /* Default to row for larger screens */
+
 }
 
 .navbar_menu>li {
@@ -73,16 +72,7 @@ body {
     text-decoration: none;
 }
 
-.navbar_menu>li>div {
-    height: 0.05rem;
-    background-color: white;
-    width: 0%;
-    transition: width 0.3s;
-}
 
-.navbar_menu>li:hover>div {
-    width: 100%;
-}
 
 .navbar_left>img {
     width: 4rem;
@@ -155,23 +145,24 @@ footer {
     align-items: center;
     padding: 1rem;
     color: white;
+    bottom: 0;
 }
 
 .footer_right {
     display: flex;
 }
 
-.footer_right ul {
+.footer_right>ul {
     display: flex;
     flex-direction: row;
 }
 
-.footer_right ul a li {
+.footer_right>ul>a>li {
     display: flex;
     padding: 0.5rem;
 }
 
-.footer_right ul a li img {
+.footer_right>ul>a>li>img {
     width: 2rem;
 }
 
@@ -180,7 +171,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .burger_button {
         display: flex;
     }
@@ -203,6 +194,29 @@ footer {
 
     .navbar_menu>li {
         justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .search_bar {
+        display: flex;
+        text-decoration: none;
+    }
+
+    .navbar_right .button_connexion {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .navbar_menu>li>div {
+        height: 0.05rem;
+        background-color: white;
+        width: 0%;
+        transition: 0.3s;
+    }
+
+    .navbar_menu>li:hover>div {
+        width: 100%;
     }
 }
 
@@ -633,7 +647,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+.form-group>button:hover {
     background-color: #cf9322;
     font-weight: bold;
 }
