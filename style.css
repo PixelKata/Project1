@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: #ffff;
-}
-
-/* Charlotte Nav */
-
 /* Navigation */
 .navbar {
     display: flex;
@@ -57,6 +51,7 @@ body {
 .navbar_menu {
     display: flex;
     flex-direction: row;
+    z-index: 1000;
 
 }
 
@@ -86,13 +81,13 @@ body {
     gap: 2rem;
 }
 
-.navbar_right .button_connexion {
+.navbar_right>.button_connexion {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.navbar_right .button_connexion button {
+.navbar_right>.button_connexion button {
     all: unset;
     display: flex;
     cursor: pointer;
@@ -128,7 +123,7 @@ body {
     text-decoration: none;
 }
 
-.navbar_right .search_bar .search {
+.navbar_right>.search_bar>.search {
     max-width: 100%;
 }
 
@@ -650,68 +645,4 @@ button {
 .form-group>button:hover {
     background-color: #cf9322;
     font-weight: bold;
-}
-
-/* Charlotte Footer */
-
-/*footer*/
-footer {
-    display: flex;
-    background-color: #114b5e;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    color: inherit;
-    color: white;
-}
-
-.footer_right {
-    display: flex;
-}
-
-.footer_right>ul {
-    display: flex;
-    flex-direction: row;
-}
-
-.footer_right>ul>a>li {
-    display: flex;
-    padding: 0.5rem;
-}
-
-.footer_right>ul>a>li>img {
-    width: 2rem;
-}
-
-.footer_left {
-    padding: 0.5rem;
-}
-
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .burger_button {
-        display: flex;
-    }
-
-    .navbar_menu {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #114b5e;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    .navbar_menu.open {
-        max-height: 20rem;
-    }
-
-    .navbar_menu>li {
-        justify-content: center;
-    }
 }
