@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <title>Galerie</title>
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="navbar_left">
+                <img src="ramen-svgrepo-com.svg" alt="Logo">
+                <ul>
+                    <li> <a href="index.html">Accueil</a>
+                        <div></div>
+                    </li>
+                    <li> <a href="#about">A propos</a>
+                        <div></div>
+                    </li>
+                    <li> <a href="#food">Cuisine</a>
+                        <div></div>
+                    </li>
+                    <li> <a href="contact.html">Contact</a>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar_right">
+                <div class="search_bar">
+                    <div><input type="search" placeholder="Italien, Fast food..." id="search" value="" onchange=""></div>
+                    <div><input type="submit" id="btn_search" value="Go"></div>
+                </div>
+                <div class="button_connexion">
+                    <button class="buttonOne">Connexion</button>
+                    <button class="buttonTwo">Inscription</button>
+                </div>
+            </div>
+        </nav>   
+
+        <div class="container">
+            <div class="slider" style="--img: url('img1.jpg')">
+                <div class="slides" style="--img: url('img1.jpg')">
+                    <div class="content">
+                        <h2>Slide 1</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img2.jpg')">
+                    <div class="content">
+                        <h2>Slide 2</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img3.jpg')">
+                    <div class="content">
+                        <h2>Slide 3</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img4.jpg')">
+                    <div class="content">
+                        <h2>Slide 4</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img5.jpg')">
+                    <div class="content">
+                        <h2>Slide 5</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img6.jpg')">
+                    <div class="content">
+                        <h2>Slide 6</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img7.jpg')">
+                    <div class="content">
+                        <h2>Slide 7</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img8.jpg')">
+                    <div class="content">
+                        <h2>Slide 8</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img9.jpg')">
+                    <div class="content">
+                        <h2>Slide 9</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+                <div class="slides" style="--img: url('img10.jpg')">
+                    <div class="content">
+                        <h2>Slide 10</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere possimus,
+                            maxime eaque eveniet ullam hic?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+        <footer>
+            <p>© 2024 By wilders</p>
+        </footer>
+        <script>
+            let next = document.querySelector('.next');
+            let prev = document.querySelector('.prev');
+            let slider = document.querySelector('.slider');
+
+            function updateActiveSlides() {
+                let slides = document.querySelectorAll('.slides');
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[2]
+                    .classList
+                    .add('active');
+                slider
+                    .style
+                    .setProperty('--img', slides[2].style.getPropertyValue('--img'));
+            }
+
+            next.addEventListener('click', function () {
+                let slides = document.querySelectorAll('.slides');
+                slider.appendChild(slides[0]);
+                updateActiveSlides();
+            });
+
+            prev.addEventListener('click', function () {
+                let slides = document.querySelectorAll('.slides');
+                slider.prepend(slides[slides.length - 1]);
+                updateActiveSlides();
+            });
+
+            function initializeSlider() {
+                let slides = document.querySelectorAll('.slides');
+                slider
+                    .style
+                    .setProperty('--img', slides[0].style.getPropertyValue('--img'));
+                slides[0]
+                    .classList
+                    .add('active');
+            }
+
+            initializeSlider();
+            updateActiveSlides();
+        </script>
+    </body>
+</html>
