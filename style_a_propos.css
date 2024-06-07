@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: #ffff;
+}
+
+/* Charlotte Nav */
+
+/* Navigation */
+.navbar {
+    display: flex;
+    background-color: #114b5e;
+    align-items: center;
+    padding: 1rem;
+    color: inherit;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar_left {
+    display: flex;
+    align-items: center;
+}
+
+.show-navbar .bar {
+    width: 0;
+    background: transparent;
+}
+
+.burger_button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    position: relative;
+
+}
+
+.burger_button:focus {
+    outline: none;
+}
+
+.burger_line {
+    width: 2rem;
+    height: 0.2rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.navbar_menu {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+
+
+.navbar_left>ul>li>a {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar_left>ul>li>div {
+    height: 0.05rem;
+    background-color: white;
+    width: 0%;
+    transition: 0.3s;
+}
+
+.navbar_left>ul>li:hover>div {
+    width: 100%;
+}
+
+
+.navbar_left>a>img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+}
+
+.navbar_right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.navbar_right .button_connexion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navbar_right .button_connexion button {
+    all: unset;
+    display: flex;
+    cursor: pointer;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    font-size: large;
+    margin: 0.2rem;
+    text-align: center;
+    transition: background-color 200ms, color 200ms;
+}
+
+.navbar_right>.button_connexion>.buttonOne {
+    color: #C45824;
+    border-color: #C45824;
+}
+
+.navbar_right>.button_connexion>.buttonTwo {
+    background-color: #C45824;
+    color: white;
+}
+
+.buttonOne:hover {
+    background-color: #eceff0;
+}
+
+.buttonTwo:hover {
+    background-color: #b86e49;
+}
+
+.search_bar {
+    display: none;
+    text-decoration: none;
+}
+
+.navbar_right .search_bar .search {
+    max-width: 100%;
+}
+
+.btn_search {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Body */
+
+body {
+    min-height: 100rem;
+    background-color: rgb(247, 247, 247);
+}
+
+main {
+    min-height: calc(200vh - 0.5rem);
+}
+
+/* Header */
+
+.header_title>h2 {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    color: #fdfdfd;
+}
+
+.apropos {
+    background-color: #114b5e;
+    border-radius: 100% 0% 100% 0% / 0% 34% 66% 100%;
+    height: 10rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+/*..aaa {
+    display: flex;
+    flex-direction: row;
+}
+
+.whoWeAre {
+    display: flex;
+    padding: 1.5rem;
+    margin: 0.4rem;
+    margin-left: 0.5rem;
+    max-width: 15ch;
+    text-align: center;
+    background-color: #C45824;
+    color: white;
+    border: 1px transparent;
+    border-radius: 45% 55% 70% 30% / 20% 63% 37% 80%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.whoWeAre>h3 {
+    font-size: medium;
+    display: flex;
+    align-items: center;
+}
+
+.presentation_text {
+
+    display: flex;
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 100ch;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: ;
+    text-align: left;
+    background-color: #ffff;
+    border: 1px transparent;
+    border-radius: 0.2rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+.presentation_text>p {
+    margin: 0.5rem;
+}
+
+.apropos2 {
+    height: 10rem;
+    padding-top: 15rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.the_project {
+    display: flex;
+    padding: 1.5rem;
+    margin: 0.4rem;
+    margin-left: 0.5rem;
+    max-width: 15ch;
+    text-align: center;
+    background-color: #C45824;
+    color: white;
+    border: 1px transparent;
+    border-radius: 45% 55% 70% 30% / 20% 63% 37% 80%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.the_project>h3 {
+    font-size: medium;
+    display: flex;
+    align-items: center;
+}
+
+.project_text {
+
+    display: flex;
+    padding: 0.5rem;
+    margin: 0 auto;
+    max-width: 50ch;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+
+    text-align: left;
+    background-color: #ffff;
+    border: 1px transparent;
+    border-radius: 0.2rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+}
+
+.project_text>p {
+    margin: 0.5rem;
+} */
+
+
+.card {
+    max-width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+
+
+.card>ul>li>.image>img {
+    width: 100%;
+    height: auto;
+    list-style: none;
+
+}
+
+.card ul li {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0 0.5rem 1rem;
+    box-shadow: -2px 5px 10px rgb(0 0 0 / 20%);
+}
+
+.card ul li a {
+    text-decoration: none;
+}
+
+.content {
+    padding: 1.1rem;
+}
+
+.title {
+    color: #C45824;
+    font-size: 1.30rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+
+}
+
+.desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2563EB;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+}
+
+.action span {
+    transition: .3s ease;
+}
+
+.action:hover span {
+    transform: translateX(4px);
+}
+
+
+/* Footer */
+
+
+
+footer {
+    display: flex;
+    background-color: #114b5e;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+
+
+}
+
+.footer_right {
+    display: flex;
+}
+
+.footer_right>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_right>ul>a>li {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.footer_right>ul>a>li>img {
+    width: 2rem;
+}
+
+.footer_left {
+    padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .burger_button {
+        display: flex;
+    }
+
+    .navbar_menu {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #114b5e;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .navbar_menu.open {
+        max-height: 20rem;
+    }
+
+    .navbar_menu>li {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .search_bar {
+        display: flex;
+        text-decoration: none;
+    }
+
+    .navbar_right .button_connexion {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .navbar_menu>li>div {
+        height: 0.05rem;
+        background-color: white;
+        width: 0%;
+        transition: 0.3s;
+    }
+
+    .navbar_menu>li:hover>div {
+        width: 100%;
+    }
+}
+
+/*Responsive*/
+
+/*footer*/
+footer {
+    display: flex;
+    background-color: #114b5e;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: inherit;
+    color: white;
+}
+
+.footer_right {
+    display: flex;
+}
+
+.footer_right>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_right>ul>a>li {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.footer_right>ul>a>li>img {
+    width: 2rem;
+}
+
+.footer_left {
+    padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .burger_button {
+        display: flex;
+    }
+
+    .navbar_menu {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #114b5e;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .navbar_menu.open {
+        max-height: 20rem;
+    }
+
+    .navbar_menu>li {
+        justify-content: center;
+    }
+}

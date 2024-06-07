@@ -11,25 +11,40 @@
 
         <nav class="navbar">
             <div class="navbar_left">
-                <img src="ramen-svgrepo-com.svg" alt="Logo">
-                <ul>
-                    <li> <a href="index.html">Accueil</a>
+                <a href="index.html"><img src="ramen-svgrepo-com.svg" alt="Logo"></a>
+                <button class="burger_button" aria-label="Toggle navigation">
+                    <span class="burger_line"></span>
+                    <span class="burger_line"></span>
+                    <span class="burger_line"></span>
+                </button>
+                <ul class="navbar_menu">
+                    <li>
+                        <a href="index.html">Accueil</a>
                         <div></div>
                     </li>
-                    <li> <a href="#about">A propos</a>
+                    <li>
+                        <a href="index_a_propos.html">A propos</a>
                         <div></div>
                     </li>
-                    <li> <a href="#food">Cuisine</a>
+                    <li>
+                        <a href="galerie.html">Galerie</a>
                         <div></div>
                     </li>
-                    <li> <a href="contact.html">Contact</a>
+                    <li>
+                        <a href="contact.html">Contact</a>
                         <div></div>
                     </li>
                 </ul>
             </div>
+
             <div class="navbar_right">
                 <div class="search_bar">
-                    <div><input type="search" placeholder="Italien, Fast food..." id="search" value="" onchange=""></div>
+                    <div><input
+                        type="search"
+                        placeholder="Brasserie, Fast food..."
+                        id="search"
+                        value=""
+                        onchange=""></div>
                     <div><input type="submit" id="btn_search" value="Go"></div>
                 </div>
                 <div class="button_connexion">
@@ -37,7 +52,7 @@
                     <button class="buttonTwo">Inscription</button>
                 </div>
             </div>
-        </nav>   
+        </nav>
 
         <div class="container">
             <div class="slider" style="--img: url('img1.jpg')">
