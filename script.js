@@ -1,3 +1,5 @@
+// Menu Burger
+
 document.addEventListener('DOMContentLoaded', () => {
     const burgerButton = document.querySelector('.burger_button');
     const navbarMenu = document.querySelector('.navbar_menu');
@@ -6,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         navbarMenu.classList.toggle('open');
     });
 });
+
+// Filtre barre de recherche
 
 document.addEventListener('DOMContentLoaded', function () {
     const searchBar = document.getElementById('search');
@@ -28,4 +32,25 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     searchBar.addEventListener('input', filterItems);
+});
+
+// Filtre vignette
+
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        const category = card.getAttribute('data-category');
+        document.querySelectorAll('.cardfood').forEach(foodCard => {
+            if (foodCard.getAttribute('data-category') === category) {
+                foodCard.style.display = 'block';
+            } else {
+                foodCard.style.display = 'none';
+            }
+        });
+    });
+});
+
+document.getElementById('resetButton').addEventListener('click', () => {
+    document.querySelectorAll('.cardfood').forEach(foodCard => {
+        foodCard.style.display = 'block';
+    });
 });

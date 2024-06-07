@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -125,9 +122,9 @@ main {
     color: #fff;
 }
 
-.content2>p {
+/* .content2>p {
     color: #fff;
-}
+} */
 
 .slider>.slides:nth-child(1) .content2,
 .slider>.slides:nth-child(1) .content2 {
