@@ -558,15 +558,15 @@ main {
 }
 
 .cardfood .imgfood {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
+    width: calc(100% - (1rem / 2));
 }
 
 .cardfood .imgfood img {
     width: 100%;
+    height: 250px;
     border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .cardfood h3 {
